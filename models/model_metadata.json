@@ -1,0 +1,55 @@
+{
+  "best_model": "Logistic Regression",
+  "numeric_cols": [
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "AvgCharges",
+    "ChargeRatio",
+    "ServiceCount"
+  ],
+  "categorical_cols": [
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaymentMethod"
+  ],
+  "passthrough_cols": [
+    "SeniorCitizen",
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "PaperlessBilling",
+    "TenureGroup",
+    "HasHighValuePlan",
+    "IsSeniorAlone"
+  ],
+  "results": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.7609,
+      "f1": 0.6324,
+      "auc": 0.8442
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7687,
+      "f1": 0.6336,
+      "auc": 0.842
+    },
+    {
+      "model": "XGBoost",
+      "accuracy": 0.7872,
+      "f1": 0.6172,
+      "auc": 0.8421
+    }
+  ],
+  "best_params": "{'clf__subsample': 1.0, 'clf__scale_pos_weight': 1, 'clf__n_estimators': 200, 'clf__max_depth': 3, 'clf__learning_rate': 0.05, 'clf__colsample_bytree': 1.0}"
+}
